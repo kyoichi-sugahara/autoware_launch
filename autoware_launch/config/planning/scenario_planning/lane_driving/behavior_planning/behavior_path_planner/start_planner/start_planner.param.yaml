@@ -22,8 +22,8 @@
       th_distance_to_middle_of_the_road: 0.5
       center_line_path_interval: 1.0
       # shift pull out
-      enable_shift_pull_out: true
-      check_shift_path_lane_departure: true
+      enable_shift_pull_out: false
+      check_shift_path_lane_departure: false
       allow_check_shift_path_lane_departure_override: false
       shift_collision_check_distance_from_end: -10.0
       minimum_shift_pull_out_distance: 0.0
@@ -35,17 +35,20 @@
       maximum_curvature: 0.07
       end_pose_curvature_threshold: 0.1
       # geometric pull out
-      enable_geometric_pull_out: true
+      enable_geometric_pull_out: false
+      enable_clothoid_pull_out: true
       geometric_collision_check_distance_from_end: 0.0
       arc_path_interval: 1.0
       divide_pull_out_path: true
-      geometric_pull_out_velocity: 1.0
+      geometric_pull_out_velocity: 4.0
       lane_departure_margin: 0.2
       lane_departure_check_expansion_margin: 0.0
       backward_velocity: -1.0
       geometric_pull_out_max_steer_angle_margin_scale: 0.72
+      pull_out_max_steer_angle: 0.26
+      pull_out_steer_rate_lim: 0.35
       # search start pose backward
-      enable_back: true
+      enable_back: false
       search_priority: "efficient_path"  # "efficient_path" or "short_back_distance"
       max_back_distance: 20.0
       backward_search_resolution: 2.0
@@ -55,7 +58,7 @@
       prepare_time_before_start: 0.0
       # freespace planner
       freespace_planner:
-        enable_freespace_planner: true
+        enable_freespace_planner: false
         end_pose_search_start_distance: 20.0
         end_pose_search_end_distance: 30.0
         end_pose_search_interval: 2.0
